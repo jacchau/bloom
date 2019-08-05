@@ -1,17 +1,17 @@
-import * as React from 'react';
-import Link from "next/link";
+import * as React from 'react'
 
-const linkStyle = {
-  marginRight: 15
-};
+const Logo = () => (<div/>)
+const TopBar = () => (<div/>)
+const NoticeBar = () => (<div/>)
+const NavBar = () => (<div/>)
 
-export const SiteHeader = () => (
-  <div>
-    <Link href="/">
-      <a style={linkStyle}>Home</a>
-    </Link>
-    <Link href="/about">
-      <a style={linkStyle}>About</a>
-    </Link>
-  </div>
-);
+const SiteHeader = () => (
+  <header>
+    <Logo />
+    <TopBar />
+    <NoticeBar />
+    <NavBar />
+  </header>
+)
+
+export default SiteHeader

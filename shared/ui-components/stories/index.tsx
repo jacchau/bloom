@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from "@storybook/react";
-import { Button } from "../src/test-button/button";
-import { Header } from "../src/header/header";
+import { Button } from "../src/atoms/button";
+import SiteHeader from "../src/headers/site_header";
 
 storiesOf("Button", module)
   .add("with text", () => <Button>Hello Button</Button>)
@@ -15,5 +15,5 @@ storiesOf("Button", module)
 
 storiesOf("Header", module)
   .add("header", () => (
-    <Header />
+    <SiteHeader />
   ))

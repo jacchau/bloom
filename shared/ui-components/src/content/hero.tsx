@@ -1,10 +1,10 @@
-import * as React from 'react';
-import Link, { Url } from "next/link";
+import * as React from 'react'
+import Link from "next/link"
 
 interface HeroProps {
-  title: JSX.Element;
-  buttonTitle: String;
-  buttonLink: Url;
+  title: JSX.Element
+  buttonTitle: string
+  buttonLink: string
 }
 
 const heroClasses = [

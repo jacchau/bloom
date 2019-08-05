@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Layout from '../layouts/application';
-import { PageHeader } from '@dahlia/ui-components/src/headers/page_header';
+import TitleHeader from '@dahlia/ui-components/src/headers/title_header';
 import { Listing, ListingsList, ListingsProps } from '../components/listings_list';
 import axios from 'axios';
 
@@ -21,7 +21,7 @@ export default class extends Component<ListingsProps> {
   render () {
     return (
       <Layout>
-        <PageHeader>Rent affordable housing</PageHeader>
+        <TitleHeader>Rent affordable housing</TitleHeader>
         <ListingsList listings={this.props.listings} />
       </Layout>
     )

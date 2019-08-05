@@ -1,13 +1,14 @@
 import { Component } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import Layout from '../layouts/application';
+import SidebarLayout from '../layouts/sidebar';
 import { Listing } from '../components/listings_list';
-import { PropertyTitleImage } from '@dahlia/ui-components/src/cards/property_title_image';
+import ImageCard from '@dahlia/ui-components/src/cards/image_card';
 import { OneLineAddress } from '@dahlia/ui-components/src/helpers/address';
-import { ContentSection } from '@dahlia/ui-components/src/sections/content_section';
-import { ListSection } from '@dahlia/ui-components/src/sections/list_section';
+import { ContentSection } from '@dahlia/ui-components/src/content/content_section';
+import { ListSection } from '@dahlia/ui-components/src/lists/list_section';
 import { InfoCard } from '@dahlia/ui-components/src/cards/info_card';
-import { Description } from '@dahlia/ui-components/src/atoms/description';
+import { Description } from '@dahlia/ui-components/src/content/description';
 
 import axios from 'axios';
 
@@ -46,9 +47,10 @@ export default class extends Component<ListingProps> {
 
     return (
       <Layout>
-        <article className="max-w-2xl m-auto mb-12">
+        <SidebarLayout.Content>
+          <article className="max-w-2xl m-auto mb-12">
           <div className="w-full p-3">
-            <PropertyTitleImage title={listing.name} imageUrl={listing.image_url} listingId={listing.id} />
+            <ImageCard title={listing.name} imageUrl={listing.image_url} url={`/listing/${listing.id}`} />
           </div>
 
           <p className="t-alt-sans uppercase">{oneLineAddress}</p>
@@ -61,7 +63,6 @@ export default class extends Component<ListingProps> {
               <ListSection title="Household Maximum Income" subtitle="For income calculations, household size includes everyone (all ages) living in the unit.">
                 <>table goes here…</>
               </ListSection>
-              
               <ListSection title="Occupancy" subtitle="Occupancy limits for this building differ from household size, and do not include children under 6.">
                 <>table goes here…</>
               </ListSection>
@@ -107,6 +108,10 @@ export default class extends Component<ListingProps> {
 
           <em>Listing Id: {listing.id}</em>
         </article>
+        </SidebarLayout.Content>
+        <SidebarLayout.Sidebar>
+          <div>Hello, I am a sidebar</div>
+        </SidebarLayout.Sidebar>
       </Layout>
 
     )
