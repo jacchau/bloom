@@ -10,7 +10,7 @@
     "build": "next build",
     "test": "concurrently \"yarn dev\" \"cypress open\"",
     "export": "next export",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "@dahlia/styles": "*",
