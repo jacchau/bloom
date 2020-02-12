@@ -62,7 +62,8 @@ footer.site-footer {
 
     .footer-copyright {
       @screen lg {
-        w-6/12 text-left
+        @apply w-6/12;
+        @apply text-left;
       }
     }
 
@@ -70,7 +71,7 @@ footer.site-footer {
       @apply mt-5;
       @screen lg {
         @apply mt-0;
-        @apply w-6\/12;
+        @apply w-6/12;
         @apply text-right;
       }
     }

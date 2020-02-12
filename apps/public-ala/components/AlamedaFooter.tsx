@@ -40,8 +40,12 @@ const AlamedaFooter = () => (
         <nav className="footer-nav">
           <a href="#">Give Feedback</a>
           <a href="#">Contact</a>
-          <Link href="/disclaimer">Disclaimer</Link>
-          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/disclaimer">
+            <a>Disclaimer</a>
+          </Link>
+          <Link href="/privacy">
+            <a>Privacy Policy</a>
+          </Link>
         </nav>
       </div>
     </section>
