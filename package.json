@@ -11,7 +11,7 @@
     "apps/public-smc",
     "services/listings"
   ],
-  "repository": "https://github.com/Exygy/bloom.git",
+  "repository": "https://github.com/housingbayarea/bloom.git",
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
