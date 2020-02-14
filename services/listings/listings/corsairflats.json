@@ -74,6 +74,8 @@
   "leasingAgentPhone": "510-499-2491",
   "leasingAgentTitle": "",
   "rentalHistory": null,
+  "preferences": [
+    ],
   "buildingTotalUnits": 50,
   "units": [
     {
